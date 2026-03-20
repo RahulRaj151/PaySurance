@@ -71,6 +71,23 @@ router.post('/create', authMiddleware, async (req, res) => {
 // Get user's policy
 router.get('/', authMiddleware, async (req, res) => {
   try {
+    // Mock for demo
+    if (req.user_id === 'demo_user') {
+      const mockPolicy = {
+        _id: 'demo_policy',
+        user_id: 'demo_user',
+        premium: 79,
+        base_premium: 50,
+        risk_score: 58,
+        coverage_amount: 10000,
+        status: 'active',
+        start_date: new Date(Date.now() - 3*24*60*60*1000),
+        end_date: new Date(Date.now() + 4*24*60*60*1000),
+        premium_explanation: 'Base: ₹50 + Risk: ₹29 (Delhi high rainfall risk)'
+      };
+      return res.json(mockPolicy);
+    }
+
     const policy = await Policy.findOne({
       user_id: req.user_id,
       status: 'active',
