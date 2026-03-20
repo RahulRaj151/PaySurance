@@ -169,19 +169,22 @@ mongod
 - **AI Service**: http://localhost:8000
 - **API Docs**: http://localhost:8000/docs (Swagger)
 
-## 💻 Demo Credentials
+**💻 Demo Credentials (Instant - No DB needed):**
 
-### Worker Account
+### Worker
 ```
 Email: demo@paysurance.com
 Password: demo@123
 ```
+**Dashboard shows:** Policy ₹79/wk (₹10k cov), Wallet ₹15k, 2 Claims, 🌧️ Rain/🔥 Heat sim buttons.
 
-### Admin Account
+### Admin
 ```
 Email: admin@paysurance.com
 Password: admin@123
 ```
+**Analytics dashboard ready.**
+
 
 ## 📱 Application Walkthrough
 
