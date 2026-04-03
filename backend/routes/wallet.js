@@ -8,6 +8,14 @@ const router = express.Router();
 // Get wallet balance
 router.get('/balance', authMiddleware, async (req, res) => {
   try {
+    // Mock for demo
+    if (req.user_id === 'demo_user') {
+      return res.json({
+        balance: 15000,
+        currency: 'INR',
+      });
+    }
+
     const user = await User.findById(req.user_id);
     res.json({
       balance: user.wallet_balance,

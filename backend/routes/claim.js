@@ -105,6 +105,26 @@ router.post('/trigger', authMiddleware, async (req, res) => {
 // Get user's claims
 router.get('/', authMiddleware, async (req, res) => {
   try {
+    // Mock for demo
+    if (req.user_id === 'demo_user') {
+      return res.json([
+        {
+          _id: 'claim1',
+          trigger_type: 'rain',
+          claim_amount: 7000,
+          status: 'paid',
+          created_at: new Date(Date.now() - 2*24*60*60*1000)
+        },
+        {
+          _id: 'claim2',
+          trigger_type: 'heat',
+          claim_amount: 7000,
+          status: 'approved',
+          created_at: new Date(Date.now() - 1*24*60*60*1000)
+        }
+      ]);
+    }
+
     const claims = await Claim.find({ user_id: req.user_id })
       .sort({ created_at: -1 })
       .populate('policy_id');

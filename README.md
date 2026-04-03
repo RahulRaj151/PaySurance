@@ -4,7 +4,7 @@
 
 An AI-powered parametric insurance platform protecting gig delivery workers (Swiggy, Zomato, Amazon, Blinkit) from income loss due to external disruptions like heavy rain, floods, extreme heat, and pollution.
 
-**Status**: ✅ Complete MERN Stack Application - Production Ready
+**Status**: 🚀 Live & Fully Functional - Demo Accounts Bypass DB (Mongo Connected)
 
 ## 📊 Project Overview
 
@@ -89,7 +89,17 @@ PaySurance/
 - Python 3.9+
 - MongoDB 5.0+ (local or MongoDB Atlas)
 
-### Step 1️⃣: Backend Setup
+### One-Click Setup (Windows Recommended)
+
+```
+.\setup.bat
+```
+
+**Auto-installs all Node deps, Python venv (if Python installed).**
+
+### Manual Setup
+
+#### Step 1️⃣: Backend Setup
 
 ```bash
 # Navigate to backend
@@ -98,12 +108,11 @@ cd backend
 # Install dependencies
 npm install
 
-# .env file is already created with defaults
-# For MongoDB Atlas, update MONGODB_URI in .env
+# .env auto-created with mongodb://localhost:27017/paysurance
 
 # Start backend server
 npm run dev
-# Backend runs on http://localhost:5000
+# Backend runs on http://localhost:5000 (`MongoDB connected`)
 ```
 
 ### Step 2️⃣: Frontend Setup
@@ -160,19 +169,22 @@ mongod
 - **AI Service**: http://localhost:8000
 - **API Docs**: http://localhost:8000/docs (Swagger)
 
-## 💻 Demo Credentials
+**💻 Demo Credentials (Instant - No DB needed):**
 
-### Worker Account
+### Worker
 ```
 Email: demo@paysurance.com
 Password: demo@123
 ```
+**Dashboard shows:** Policy ₹79/wk (₹10k cov), Wallet ₹15k, 2 Claims, 🌧️ Rain/🔥 Heat sim buttons.
 
-### Admin Account
+### Admin
 ```
 Email: admin@paysurance.com
 Password: admin@123
 ```
+**Analytics dashboard ready.**
+
 
 ## 📱 Application Walkthrough
 
