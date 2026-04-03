@@ -78,8 +78,8 @@ export const LoginPage = () => {
 
         <div className="mt-6 p-4 bg-blue-50 rounded text-xs text-gray-600">
           <p className="font-semibold mb-2">Demo Credentials:</p>
-          <p>Email: demo@paysurance.com</p>
-          <p>Password: demo123</p>
+          <p><strong>User:</strong> demo@paysurance.com / demo@123</p>
+          <p><strong>Admin:</strong> admin@paysurance.com / admin@123</p>
         </div>
       </Card>
     </div>
